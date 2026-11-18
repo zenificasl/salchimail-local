@@ -207,7 +207,7 @@ func rehearse(o options, e env) (int, error) {
 	}
 
 	p := func(key string, args ...any) { fmt.Fprintf(e.stderr, t(key)+"\n", args...) }
-	sent := rep.Sent
+	sent := len(rep.Wave1) + len(rep.Wave2) // every address in a request left this machine, answered or not
 	if o.dryRun {
 		printPlan(o, e, t, rep)
 	} else {

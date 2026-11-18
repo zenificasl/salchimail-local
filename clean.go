@@ -171,7 +171,7 @@ func clean(o options, e env) (int, error) {
 		bySource[d.Source]++
 		byAction[d.Action]++
 	}
-	sent := rep.Sent
+	sent := len(rep.Wave1) + len(rep.Wave2) // every address in a request left this machine, answered or not
 	p := func(key string, args ...any) { fmt.Fprintf(e.stderr, t(key)+"\n", args...) }
 	p("sum_title", len(rows), len(decided))
 	p("sum_local", bySource["own_history"]+bySource["local_rules"]+bySource["local_dns"])

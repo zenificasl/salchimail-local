@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-const version = "0.2.0"
+const version = "0.2.1"
 
 const usage = `salchimail-local %s: verify an email list on your own machine first.
 

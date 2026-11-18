@@ -20,7 +20,6 @@ type outcome struct {
 type probeReport struct {
 	Wave1, Wave2 []string // addresses sent, or that a dry run would send
 	Charged      int
-	Sent         int // addresses the API accepted, answered or still in a batch
 	Pending      bool
 	TestMode     bool
 }
@@ -135,10 +134,8 @@ func probe(o options, e env, candidates []string) (map[string]outcome, probeRepo
 				out[email] = outcome{API: "sent", Verdict: r.Verdict, Code: r.Code, Reason: r.Reason}
 				rep.Charged += charged
 				left -= charged
-				rep.Sent++
 			} else if pending {
 				out[email] = outcome{API: "pending", Code: "batch_pending"}
-				rep.Sent++
 			} // else the request failed or the batch was canceled: it stays mailbox_not_checked
 		}
 		return results, err
