@@ -1,0 +1,19 @@
+salchimail-local clean: 20 rows, 19 unique addresses
+Resolved on this machine: 12
+  with your own history: 7
+  with syntax and domain lists: 2
+  with DNS: 3
+DRY RUN: nothing was sent. A real run would send these addresses, and only these, to POST https://api.salchimail.com/v1/batches in mailbox mode:
+  Wave 1, one address per domain (3):
+    carla@discrimina.example
+    fede@aceptatodo.example
+    hugo@bloquea.example
+  Wave 2, each one only if wave 1 shows that its server tells mailboxes apart (up to 4):
+    nora@discrimina.example
+    pablo@discrimina.example
+    rosa@aceptatodo.example
+    ines@bloquea.example
+  Budget: at most 10 mailbox credits; addresses beyond it are not sent.
+  Your history and every other address stay on this machine.
+Not checked: 7
+Decisions: send 5, do_not_send 6, review 1, not_checked 7

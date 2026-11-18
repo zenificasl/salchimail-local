@@ -1,0 +1,12 @@
+Ensayo de política de registro: 13 altas (5 buenas: pagaron o se activaron; 2 basura: marcadas o con rebote duro; 6 sin desenlace)
+
+REGLA                            BLOQUEARÍA  BUENAS PERDIDAS  BASURA FRENADA  SIN DESENLACE  QUÉ HACE
+reject_syntax                    1           0                0               1              Rechazar direcciones con sintaxis inválida
+require_mx                       3           0                1               2              Rechazar dominios que no pueden recibir correo
+reject_invalid                   4           0                1               3              Rechazar lo que el modo basic llama invalid (las dos reglas anteriores)
+block_disposable                 2           1                1               0              Bloquear dominios desechables
+block_legacy                     1           1                0               0              Bloquear dominios de proveedores desaparecidos
+block_free                       0           0                0               0              Bloquear correo gratuito (Gmail, Outlook, Yahoo...)
+reject_invalid_block_disposable  6           1                2               3              Rechazar invalid y bloquear desechables (el patrón documentado para registros)
+
+Léelo con cuidado: las direcciones se comprueban como están hoy, no como estaban el día del alta; las altas que una regla anterior ya rechazó no están en tus datos; y los recuentos pequeños prueban poco.

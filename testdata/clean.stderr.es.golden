@@ -1,0 +1,11 @@
+salchimail-local clean: 20 filas, 19 direcciones únicas
+Resueltas en esta máquina: 12
+  con tu propio historial: 7
+  con sintaxis y listas de dominios: 2
+  con DNS: 3
+Enviadas a la API de SalchiMail: 5 (créditos de buzón cobrados: 4)
+Resueltas sin enviarlas, con la respuesta a otra dirección del dominio: 2
+Nunca salieron de esta máquina: 14 de 19 direcciones, y todas las filas de tu historial.
+Sin comprobar: 0
+Decisiones: send 7, do_not_send 7, review 5, not_checked 0
+Clave de pruebas: los resultados de la API son simulados.

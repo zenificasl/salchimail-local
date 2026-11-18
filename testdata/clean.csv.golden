@@ -1,0 +1,21 @@
+row,email,action,source,api,reason_code,reason
+1,ana@discrimina.example,send,own_history,no,own_reply,Replied to you on 2026-10-20
+2,bruno@discrimina.example,do_not_send,own_history,no,own_hard_bounce,Your own email hard-bounced on 2026-08-01
+3,carla@discrimina.example,send,api,sent,mailbox_exists,The mail server accepts this recipient and rejects a random one.
+4,dario@aceptatodo.example,send,own_history,no,own_reply,Replied to you on 2026-09-15
+5,elena@aceptatodo.example,do_not_send,own_history,no,own_hard_bounce,Your own email hard-bounced on 2026-10-01
+6,fede@aceptatodo.example,review,api,sent,catch_all,The mail server also accepts a random recipient.
+7,gema@bloquea.example,send,own_history,no,own_delivered,Accepted without a bounce on 2026-10-30 (does not prove it reached the inbox)
+8,hugo@bloquea.example,review,api,sent,probe_blocked,The mail server refuses our probe.
+9,ines@bloquea.example,review,api_domain,no,probe_blocked,"Not sent: the server did not let another address of this domain be checked (probe_blocked), so this one would not be resolved either"
+10,juan@muerto.example,do_not_send,local_dns,no,domain_no_mail_host,The domain has no MX and no address record: it cannot receive mail
+11,kira@muerto.example,do_not_send,local_dns,no,domain_no_mail_host,The domain has no MX and no address record: it cannot receive mail
+12,luis@discrimina.example,send,own_history,no,own_reply,Replied to you on 2026-09-01
+13,nora@discrimina.example,do_not_send,api,sent,mailbox_not_found,The mail server says the recipient does not exist.
+14,pablo@discrimina.example,send,api,sent,mailbox_exists,The mail server accepts this recipient and rejects a random one.
+15,quique@aceptatodo.example,send,own_history,no,own_click,Clicked a link in your email on 2026-10-01 (clicks can be automatic)
+16,rosa@aceptatodo.example,review,api_domain,no,catch_all,"Not sent: the server accepts any recipient (seen with another address of this domain), so checking this mailbox would add nothing"
+17,marta@mailinator.com,review,local_rules,no,disposable_domain,Disposable email domain
+18,not-an-email,do_not_send,local_rules,no,syntax_invalid,Not a valid email address
+19,carla@discrimina.example,send,api,sent,mailbox_exists,The mail server accepts this recipient and rejects a random one.
+20,olga@nulo.example,do_not_send,local_dns,no,domain_null_mx,The domain declares that it accepts no mail (null MX)

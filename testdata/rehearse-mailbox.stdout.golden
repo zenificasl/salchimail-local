@@ -1,0 +1,15 @@
+Sign-up policy rehearsal: 13 sign-ups (5 good: paid or activated; 2 junk: flagged or hard-bounced; 6 with no outcome)
+
+RULE                             WOULD BLOCK  GOOD LOST  JUNK STOPPED  NO OUTCOME  WHAT IT DOES
+reject_syntax                    1            0          0             1           Reject addresses with invalid syntax
+require_mx                       3            0          1             2           Reject domains that cannot receive mail
+reject_invalid                   4            0          1             3           Reject what basic mode calls invalid (the two rules above)
+block_disposable                 2            1          1             0           Block disposable domains
+block_legacy                     1            1          0             0           Block domains of discontinued providers
+block_free                       0            0          0             0           Block free webmail (Gmail, Outlook, Yahoo...)
+reject_invalid_block_disposable  6            1          2             3           Reject invalid and block disposable (the documented sign-up pattern)
+mailbox_reject_invalid           5            0          1             4           Reject what mailbox mode calls invalid
+mailbox_reject_invalid_risky     10           3          2             5           Reject invalid and risky in mailbox mode
+
+Mailbox rules use the 6 of 13 addresses that got an answer from the API.
+Read with care: addresses are checked as they are today, not as they were on the sign-up date; sign-ups that an earlier rule already rejected are not in your data; and small counts prove little.

@@ -1,0 +1,14 @@
+email,signed_up_at,outcome
+ana@discrimina.example,2026-08-01,paid
+carla@discrimina.example,2026-08-03,activated
+nora@discrimina.example,2026-08-05,
+fede@aceptatodo.example,2026-08-07,paid
+rosa@aceptatodo.example,2026-08-09,
+tom@mailinator.com,2026-08-12,fraud
+eva@mailinator.com,2026-08-13,activated
+bot1@muerto.example,2026-08-14,fraud
+bot2@muerto.example,2026-08-15,
+asdf,2026-08-16,
+olga@nulo.example,2026-08-17,
+pepe@wanadoo.es,2026-08-18,paid
+kira@bloquea.example,2026-08-19,

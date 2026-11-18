@@ -1,0 +1,11 @@
+salchimail-local clean: 20 rows, 19 unique addresses
+Resolved on this machine: 12
+  with your own history: 7
+  with syntax and domain lists: 2
+  with DNS: 3
+Sent to the SalchiMail API: 5 (mailbox credits charged: 4)
+Resolved without being sent, from the answer for another address of the domain: 2
+Never left this machine: 14 of 19 addresses, and every row of your history.
+Not checked: 0
+Decisions: send 7, do_not_send 7, review 5, not_checked 0
+Test-mode key: the API results are simulated.

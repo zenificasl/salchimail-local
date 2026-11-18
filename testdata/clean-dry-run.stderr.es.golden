@@ -1,0 +1,19 @@
+salchimail-local clean: 20 filas, 19 direcciones únicas
+Resueltas en esta máquina: 12
+  con tu propio historial: 7
+  con sintaxis y listas de dominios: 2
+  con DNS: 3
+ENSAYO (--dry-run): no se ha enviado nada. Una ejecución real enviaría estas direcciones, y solo estas, a POST https://api.salchimail.com/v1/batches en modo mailbox:
+  Ola 1, una dirección por dominio (3):
+    carla@discrimina.example
+    fede@aceptatodo.example
+    hugo@bloquea.example
+  Ola 2, cada una solo si la ola 1 muestra que su servidor distingue buzones (hasta 4):
+    nora@discrimina.example
+    pablo@discrimina.example
+    rosa@aceptatodo.example
+    ines@bloquea.example
+  Presupuesto: como máximo 10 créditos de buzón; las direcciones que lo superen no se envían.
+  Tu historial y todas las demás direcciones se quedan en esta máquina.
+Sin comprobar: 7
+Decisiones: send 5, do_not_send 6, review 1, not_checked 7
